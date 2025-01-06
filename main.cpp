@@ -1,10 +1,10 @@
 #include <iostream>
 
-#include <rchrd/block_time.hpp>
+#include <tr/block_time.hpp>
 
 int main()
 {
-    rchrd::BlockTime block_time(__FILE__);
+    tr::BlockTime block_time(__FILE__);
 
     block_time.set();
     
@@ -13,6 +13,27 @@ int main()
     block_time.set();
 
     for (int i = 0; i < 1000; i++)
+    {
+        int smth = i;
+    }
+
+    block_time.set();
+
+    for (int i = 0; i < 10000; i++)
+    {
+        int smth = i;
+    }
+
+    block_time.set();
+
+    for (int i = 0; i < 100000; i++)
+    {
+        int smth = i;
+    }
+
+    block_time.set();
+    
+    for (int i = 0; i < 100000; i++)
     {
         int smth = i;
     }
@@ -33,14 +54,9 @@ int main()
 
     block_time.set();
 
-    for (int i = 0; i < 10000000; i++)
-    {
-        int smth = i;
-    }
-
-    block_time.set();
-
     block_time.print();
+
+    block_time.clear();
 
     return 0;
 }

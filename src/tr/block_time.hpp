@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 
-namespace rchrd
+namespace tr
 {
     typedef std::chrono::time_point<std::chrono::steady_clock> time;
 
@@ -55,28 +55,26 @@ namespace rchrd
                 {
                     auto diff = time_period[i].end - time_period[i].begin;
                     if (std::chrono::duration<double, std::milli>(diff).count() <= 0.001)
-                        std::cout << "\033[1;37m";
+                        std::cout << "\033[0;37m";
                     else if ((std::chrono::duration<double, std::milli>(diff).count() > 0.001)
                             && (std::chrono::duration<double, std::milli>(diff).count() < 0.1))
-                        std::cout << "\033[1;32m";
+                        std::cout << "\033[0;32m";
                     else if ((std::chrono::duration<double, std::milli>(diff).count() >= 0.1
                             && (std::chrono::duration<double, std::milli>(diff).count() < 1.0)))
-                        std::cout << "\033[1;33m";
+                        std::cout << "\033[0;33m";
                     else if ((std::chrono::duration<double, std::milli>(diff).count() >= 1.0))
-                        std::cout << "\033[1;31m";
-                    
-                    std::cout << "[" << std::endl;
+                        std::cout << "\033[0;31m";
                     
                     std::ifstream in(path);
                     std::string line;
+                    std::string output;
                     int found = -1;
+
                     while (!in.eof() && found != i)
                     {
                         in >> line;
                         if (line == "block_time.set();")
-                        {
                             found++;
-                        }
                     }
                     while(getline(in, line))
                     {
@@ -87,34 +85,20 @@ namespace rchrd
                         {
                             if (word == "block_time.set();")
                                 found++;
-                            else
-                            {
-                                words++;
-                                if (words == 1)
-                                {
-                                    //std::cout << "\n\t";
-                                }
-                                //std::cout << word << " ";
-                            }
                         }
-                        //fix_line(line);
-                        std::cout << line << std::endl;
+                        if (found != i + 1 && word.length() != 0)
+                            std::cout << std::endl << "│" << line;
                     }
                     in.close();
 
-                    std::cout << "\n\n] [block] execution time: ~" << std::setprecision(2) << std::chrono::duration<double, std::milli>(diff).count() << "ms~\n";
+                    std::cout << "\033[1m";
+                    std::cout << "\n├──";
+                    std::cout << "\033[4m";
+                    std::cout << "execution time: " << std::setprecision(2) << std::chrono::duration<double, std::milli>(diff).count() << "ms";
                     std::cout << "\033[0m";
                 }
-            }
 
-            std::string& fix_line(std::string &s)
-            {
-                size_t start_pos = 0;
-                while((start_pos = s.find("\\n", start_pos)) != std::string::npos) {
-                    s.replace(start_pos, 2, "\n");
-                    start_pos += 1;
-                }
-                return s;
+                std::cout << '\n';
             }
 
         private:

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/therchrd/Documents/С++/block-time/src
+CXX_INCLUDES = -I/Users/therchrd/Documents/Code/block-time/src
 
 CXX_FLAGSarm64 = -std=c++17 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1
 

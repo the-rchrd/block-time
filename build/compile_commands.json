@@ -1,8 +1,8 @@
 [
 {
-  "directory": "/Users/therchrd/Documents/С++/block-time/build",
-  "command": "/usr/bin/clang++  -I/Users/therchrd/Documents/С++/block-time/src -std=c++17 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -o CMakeFiles/block_code.dir/main.cpp.o -c /Users/therchrd/Documents/С++/block-time/main.cpp",
-  "file": "/Users/therchrd/Documents/С++/block-time/main.cpp",
+  "directory": "/Users/therchrd/Documents/Code/block-time/build",
+  "command": "/usr/bin/clang++  -I/Users/therchrd/Documents/Code/block-time/src -std=c++17 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.1 -o CMakeFiles/block_code.dir/main.cpp.o -c /Users/therchrd/Documents/Code/block-time/main.cpp",
+  "file": "/Users/therchrd/Documents/Code/block-time/main.cpp",
   "output": "CMakeFiles/block_code.dir/main.cpp.o"
 }
 ]

@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "block_code::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-block_code-Debug-1b795ac21106d8a5f0db.json",
+					"jsonFile" : "target-block_code-Debug-1c670a7930725f711c25.json",
 					"name" : "block_code",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/therchrd/Documents/\u0421++/block-time/build",
-		"source" : "/Users/therchrd/Documents/\u0421++/block-time"
+		"build" : "/Users/therchrd/Documents/Code/block-time/build",
+		"source" : "/Users/therchrd/Documents/Code/block-time"
 	},
 	"version" : 
 	{
