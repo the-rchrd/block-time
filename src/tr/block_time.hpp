@@ -22,7 +22,7 @@ namespace tr
 
             virtual void set() = 0;
             virtual void clear() = 0;
-            virtual void print() = 0;
+            virtual void print() const = 0;
     };
 
     class BlockTime : public ITime
@@ -47,9 +47,9 @@ namespace tr
 
             void clear() { time_period.clear(); }
 
-            void print()
+            void print() const
             {
-                std::cout << '\n';
+                std::cout << "\n.";
                 
                 for (int i = 0; i < time_period.size() - 1; i++)
                 {
@@ -82,17 +82,18 @@ namespace tr
                         std::stringstream ls(line);
                         std::string word;
                         while (ls >> word && found != i + 1)
-                        {
                             if (word == "block_time.set();")
                                 found++;
-                        }
                         if (found != i + 1 && word.length() != 0)
                             std::cout << std::endl << "│" << line;
                     }
                     in.close();
 
                     std::cout << "\033[1m";
-                    std::cout << "\n├──";
+                    if (i == time_period.size() - 2)
+                        std::cout << "\n└──";
+                    else
+                        std::cout << "\n├──";
                     std::cout << "\033[4m";
                     std::cout << "execution time: " << std::setprecision(2) << std::chrono::duration<double, std::milli>(diff).count() << "ms";
                     std::cout << "\033[0m";

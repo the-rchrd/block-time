@@ -32,7 +32,7 @@ int main()
     }
 
     block_time.set();
-    
+
     for (int i = 0; i < 100000; i++)
     {
         int smth = i;
