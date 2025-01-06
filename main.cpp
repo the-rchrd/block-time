@@ -7,7 +7,7 @@ int main()
     tr::BlockTime block_time(__FILE__);
 
     block_time.set();
-    
+
     std::cout << "Hello, World!" << std::endl;
 
     block_time.set();
