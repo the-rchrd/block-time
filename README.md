@@ -107,9 +107,7 @@ int main()
 ### Output
 
 When you run the code, it will output something like this:
-```markdown
 ![FAILED TO LOAD IMAGE](img/output.png)
-```
 
 ### LICENSE
 This project is licensed under the MIT License - see the LICENSE file for details.
