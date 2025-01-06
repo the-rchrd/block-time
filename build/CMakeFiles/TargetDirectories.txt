@@ -1,0 +1,3 @@
+/Users/therchrd/Documents/С++/block-time/build/CMakeFiles/block_code.dir
+/Users/therchrd/Documents/С++/block-time/build/CMakeFiles/edit_cache.dir
+/Users/therchrd/Documents/С++/block-time/build/CMakeFiles/rebuild_cache.dir
