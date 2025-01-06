@@ -100,7 +100,7 @@ int main()
 ### Output
 
 When you run the code, it will output something like this:
-![FAILED TO LOAD IMAGE](img/output.png)
+![FAILED TO LOAD IMAGE](img/terminal.png)
 
 ## LICENSE
 This project is licensed under the MIT License - see the LICENSE file for details.
