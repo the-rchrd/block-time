@@ -24,11 +24,11 @@ Here’s an example of how to use the BlockTime class to measure execution time 
 ```cpp
 #include <iostream>
 
-#include <tr/block_time.hpp> // INCLUDE HEADER FILE
+#include <tr/block_time.hpp>    // INCLUDE HEADER FILE
 
 int main()
 {
-    tr::BlockTime block_time(__FILE__);  // INITIALIZE WITH THE SOURCE FILE NAME (__FILE__)
+    tr::BlockTime block_time(__FILE__); // INITIALIZE WITH THE SOURCE FILE NAME (__FILE__)
 
     block_time.set(__LINE__);  /* 
                                 * FIRST SETTER
@@ -43,10 +43,7 @@ int main()
                                 * & WILL SET START FOR THE NEXT ONE CODE BLOCK
                                 */
 
-    for (int i = 0; i < 1000; i++)
-    {
-        int smth = i;
-    }
+    int smth;
 
     block_time.set(__LINE__);  /* 
                                 * SO ANOTHER ONE SETTER WILL DO THE SAME
@@ -56,35 +53,35 @@ int main()
 
     for (int i = 0; i < 10000; i++)
     {
-        int smth = i;
+        smth = i;
     }
 
     block_time.set(__LINE__);
 
     for (int i = 0; i < 100000; i++)
     {
-        int smth = i;
+        smth = i;
     }
 
     block_time.set(__LINE__);
 
     for (int i = 0; i < 100000; i++)
     {
-        int smth = i;
+        smth = i;
     }
 
     block_time.set(__LINE__);
 
     for (int i = 0; i < 100000; i++)
     {
-        int smth = i;
+        smth = i;
     }
 
     block_time.set(__LINE__);
 
-    for (int i = 0; i < 1000000; i++)
+    for (int i = 0; i < 10000000; i++)
     {
-        int smth = i;
+        smth = i;
     }
 
     block_time.set(__LINE__);  /* 
