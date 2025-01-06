@@ -1,12 +1,8 @@
 # Block — Time
 
----
-
 ## OVERVIEW
 
 This repository contains a header file to measure the execution time of specific code blocks. It helps you analyze performance and find the most efficient solutions for your code.
-
----
 
 ## INSTALLATION
 
@@ -22,7 +18,7 @@ include_directories(path/to/block_time_header_directory)
 
 ---
 
-### EXAMPLE
+## EXAMPLE
 
 Here’s an example of how to use the BlockTime class to measure execution time for different code blocks:
 ```cpp
@@ -109,11 +105,11 @@ int main()
 When you run the code, it will output something like this:
 ![FAILED TO LOAD IMAGE](img/output.png)
 
-### LICENSE
+## LICENSE
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-### BUGS
+## BUGS
 If you encounter any bugs or issues, please report them at the GitHub Issues page.
 
-### CREDITS
+## CREDITS
 Made with ❤️ by @the-rchrd...
