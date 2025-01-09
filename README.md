@@ -106,7 +106,7 @@ When you run the code, it will output something like this:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## BUGS
-If you encounter any bugs or issues, please report them at the GitHub Issues page.
+If you encounter any bugs or issues, please report them here https://github.com/the-rchrd/block-time/issues
 
 ## CREDITS
 Made with ❤️ by @the-rchrd...
