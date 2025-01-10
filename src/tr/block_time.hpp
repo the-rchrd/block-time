@@ -15,8 +15,6 @@ namespace tr
         int line_begin, line_end;
 
         time begin, end;
-
-        const time difference() { return time(begin - end); }
     };
 
     class ITime
@@ -40,17 +38,20 @@ namespace tr
             {
                 if (time_period.empty())    // THERE WAS NO ONE SETTER BEFORE
                 {
-                    time_period.resize(time_period.size() + 1);                                     // ++SIZE                       */
-                    time_period[time_period.size() - 1].begin = std::chrono::steady_clock::now();   // SET BEGIN OF NEW PERIOD      */
-                    time_period[time_period.size() - 1].line_begin = line;
+                    TimePeriod t_p;
+                    time_period.push_back(t_p);
+                    time_period.back().begin = std::chrono::steady_clock::now();    // SET BEGIN OF NEW PERIOD      //
+                    time_period.back().line_begin = line;
                 }
                 else                        // THERE WAS SETTER BEFORE
                 {
-                    time_period[time_period.size() - 1].end = std::chrono::steady_clock::now();     // SET END OF PREVIOUS PERIOD   //
-                    time_period[time_period.size() - 1].line_end = line;
-                    time_period.resize(time_period.size() + 1);                                     /* ++SIZE                       */
-                    time_period[time_period.size() - 1].begin = std::chrono::steady_clock::now();   /* SET BEGIN OF NEW PERIOD      */
-                    time_period[time_period.size() - 1].line_begin = line;
+                    time_period.back().end = std::chrono::steady_clock::now();      // SET END OF PREVIOUS PERIOD   //
+                    time_period.back().line_end = line;
+
+                    TimePeriod t_p;
+                    time_period.push_back(t_p);
+                    time_period.back().begin = std::chrono::steady_clock::now();    // SET BEGIN OF NEW PERIOD      //
+                    time_period.back().line_begin = line;
                 }
             }
 
