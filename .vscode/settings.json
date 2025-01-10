@@ -75,6 +75,9 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "__split_buffer": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "__node_handle": "cpp",
+        "source_location": "cpp",
+        "codecvt": "cpp"
     }
 }

@@ -19,7 +19,7 @@ int main()
                                 * & WILL SET START FOR THE NEXT ONE CODE BLOCK
                                 */
 
-    int smth;
+    int smth = 0;
 
     block_time.set(__LINE__);  /* 
                                 * SO ANOTHER ONE SETTER WILL DO THE SAME

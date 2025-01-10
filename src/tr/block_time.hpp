@@ -61,7 +61,7 @@ namespace tr
             {
                 std::cout << "\n.";
                 
-                for (int i = 0; i < time_period.size() - 1; i++)
+                for (std::size_t i = 0; i < time_period.size() - 1; i++)
                 {
                     auto diff = time_period[i].end - time_period[i].begin;                          // COUNT DIFF IN BLOCK TIME
 

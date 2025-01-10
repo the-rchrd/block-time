@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(block_code)
 
-set(CMAKE_CXX_FLAGS "-std=c++17")
+set(CMAKE_CXX_FLAGS "-std=c++17 -pedantic-errors -Wall -Wextra")
 
 set(SOURCE main.cpp)
 
